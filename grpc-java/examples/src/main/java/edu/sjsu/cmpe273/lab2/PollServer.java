@@ -54,7 +54,7 @@ private String moderatorId;
 
     @Override
     public void createPoll(PollRequest req, StreamObserver<PollResponse> responseObserver) {
-	logger.info("Registration id from the request is: " + req.getModeratorId()); 
+	logger.info("Mod id from the request is: " + req.getModeratorId()); 
       PollResponse reply = PollResponse.newBuilder().setId("1ADC2FZ").build();
       responseObserver.onValue(reply);
       responseObserver.onCompleted();
